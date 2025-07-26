@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:wedding_app/splash_screen/splash_screen.dart';
 import 'package:wedding_app/screens/gallery_screen.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple), 
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
@@ -25,6 +24,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-

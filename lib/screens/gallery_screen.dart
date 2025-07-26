@@ -23,14 +23,14 @@ class GalleryScreen extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset('assets/images/${index + 1}.jpg'),
-                IconButton(
-                  icon: const Icon(Icons.download),
-                  onPressed: () async {
-                    // Construct the file path for the asset image
-                    String imagePath = 'assets/images/${index + 1}.jpg';
-                    await downloadImage(imagePath, index + 1);
-                  },
-                ),
+                // IconButton(
+                //   icon: const Icon(Icons.download),
+                //   onPressed: () async {
+                //     // Construct the file path for the asset image
+                //     String imagePath = 'assets/images/${index + 1}.jpg';
+                //     await downloadImage(imagePath, index + 1);
+                //   },
+                // ),
               ],
             ),
           ),

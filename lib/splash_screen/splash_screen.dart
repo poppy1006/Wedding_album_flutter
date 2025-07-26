@@ -1,11 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wedding_app/screens/gallery_api.dart';
 import 'package:wedding_app/screens/gallery_screen.dart';
 import 'package:wedding_app/widgets/constants.dart';
 import 'package:widget_and_text_animator/widget_and_text_animator.dart';
-
-
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -20,13 +19,10 @@ class SplashScreenState extends State<SplashScreen> {
 
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 2),
-            ()=>Navigator.pushReplacement(context,
-            MaterialPageRoute(builder:
-                (context) => const EndSplash()
-            )
-         )
-    );
+    Timer(
+        const Duration(seconds: 2),
+        () => Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => const EndSplash())));
   }
 
   // ############## SPLASH SCREEN CONTENT ##############
@@ -44,17 +40,16 @@ class SplashScreenState extends State<SplashScreen> {
           // SizedBox(height: 15,),
           Image.asset("assets/images/splash.png"),
           Align(
-            alignment: Alignment.center,
-            child: TextAnimator(
-            Constants.SPLASH_NAME,
-            style: GoogleFonts.alexBrush(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              color: txtclr,
-              decoration: TextDecoration.none,
-            ),
-          )
-          ),
+              alignment: Alignment.center,
+              child: TextAnimator(
+                Constants.SPLASH_NAME,
+                style: GoogleFonts.alexBrush(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: txtclr,
+                  decoration: TextDecoration.none,
+                ),
+              )),
 
           // TextAnimator(
           //   "Ashik & Afna",
@@ -76,6 +71,6 @@ class EndSplash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GalleryScreen();
+    return const GalleryScreenApi();
   }
 }
